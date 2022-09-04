@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "cors": "^2.8.5",
+    "easy-soap-request": "^4.6.0",
+    "express-handlebars": "^6.0.2",
+    "file-system": "^1.2.2",
+    "soap": "^0.43.0"
+  }
+}

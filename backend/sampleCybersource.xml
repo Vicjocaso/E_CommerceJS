@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+  <soapenv:Header>
+    <wsse:Security soapenv:mustUnderstand="1" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+      <wsse:UsernameToken>
+        <wsse:Username>"MerchantId"</wsse:Username>
+        <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">HD/qAz39NoitzfDKwrHW8Im/m1hPG3mloAzXzmPCZotvhH+ys1UEyGzpOyuwgfUFYeC39GmR27iF8k+UQYwDuQtS/iZlZ343NyKYZwKYSPOQxvlru/EGw3SfXRlIHQIKT88P/BPoVPEqulFCrI+YnFpyRaht5KIGbHpl4qzYTXP0WLFfNj1l+HXAU7FTnKCboACP74hRuerq/ojFmFXjnI9b6TwK8I6r3CtTfgzpPQEqWm89NMKjTaw7srfi2w/Dovk11qPmf7QvMM2LXpL/M1vQir/uHy2hXwdw838OrRLES5e2Tx2Y22/zXFhyiNrzCH+A+Uln/ez3QTnOiYFDzQ==</wsse:Password>
+      </wsse:UsernameToken>
+    </wsse:Security>
+  </soapenv:Header>
+  <soapenv:Body>
+    <requestMessage xmlns="urn:schemas-cybersource-com:transaction-data-1.192">
+      <merchantID>"MerchantId"</merchantID>
+      <merchantReferenceCode>MRC-123</merchantReferenceCode>
+      <billTo>
+        <firstName>John</firstName>
+        <lastName>Doe</lastName>
+        <street1>1295 Charleston Road</street1>
+        <city>Mountain View</city>
+        <state>CA</state>
+        <postalCode>94043</postalCode>
+        <country>US</country>
+        <email>null@cybersource.com</email>
+        <ipAddress>127.0.0.1</ipAddress>
+      </billTo>
+      <item id="0">
+        <unitPrice>5.00</unitPrice>
+        <quantity>1</quantity>
+        <productName>TEST1</productName>
+      </item>
+      <item id="1">
+        <unitPrice>200.00</unitPrice>
+        <quantity>2</quantity>
+        <productName>TEST2</productName>
+      </item>
+      <purchaseTotals>
+        <currency>DOP</currency>
+        <grandTotalAmount>205.00</grandTotalAmount>
+      </purchaseTotals>
+      <card>
+        <accountNumber>4111111111111111</accountNumber>
+        <expirationMonth>11</expirationMonth>
+        <expirationYear>2022</expirationYear>
+        <cvNumber>123</cvNumber>
+      </card>
+      <merchantDefinedData>
+        <mddField id="1">RETAIL</mddField>
+        <mddField id="2">"MerchantId"</mddField>
+        <mddField id="3">WEB</mddField>
+        <mddField id="4">aminaya</mddField>
+        <mddField id="27">TOKENIZATION YES</mddField>
+        <mddField id="29">CEDULA</mddField>
+        <mddField id="30">123-1234567-8</mddField>
+      </merchantDefinedData>
+      <ccAuthService run="true"/>
+      <ccCaptureService run="true"/>
+      <deviceFingerprintID>12</deviceFingerprintID>
+    </requestMessage>
+  </soapenv:Body>
+</soapenv:Envelope>
